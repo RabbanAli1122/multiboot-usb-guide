@@ -2,7 +2,7 @@
 
 A fully verified, multi-OS bootable USB drive built using [Ventoy](https://www.ventoy.net). This guide documents everything — the ISOs collected, their verified SHA256 checksums, download sources, issues encountered, and the exact process used to build it. Anyone can follow this guide to reproduce the exact same USB from scratch.
 
----
+ 
 
 ## Table of Contents
 
@@ -19,7 +19,7 @@ A fully verified, multi-OS bootable USB drive built using [Ventoy](https://www.v
 - [USB Storage Used](#usb-storage-used)
 - [License](#license)
 
----
+ 
 
 ## Background
 
@@ -27,7 +27,7 @@ This project started with a simple goal: build one USB drive that can boot into 
 
 The process turned out to be more involved than expected. This README documents every decision, every issue, and every solution so that anyone attempting the same thing does not have to figure it out the hard way.
 
----
+ 
 
 ## Download Manager Recommendation
 
@@ -42,7 +42,7 @@ For torrent downloads (Fedora, Kali, Windows 7):
 
 Note: qBittorrent pre-allocates the full file size on disk immediately, so a file will appear full-size in Finder or File Explorer even at 10% progress. Trust the progress percentage inside qBittorrent, not the file size shown in the file manager.
 
----
+ 
 
 ## Critical Issues Encountered
 
@@ -74,7 +74,7 @@ An initial Windows 10 download was corrupted — the SHA256 checksum did not mat
 
 The first Windows 7 ISOs found were from an unofficial Dell All-in-One upload on Archive.org with no verifiable checksums. These were deleted and replaced with the official Microsoft SP1 originals sourced from Archive.org's verified mirror.
 
----
+ 
 
 ## What is Ventoy
 
@@ -89,21 +89,21 @@ No re-flashing needed when adding new ISOs — just copy and boot.
 
 Most ISO files follow a standard boot specification (called the El Torito standard) that Ventoy can chain-boot universally. Ventoy is not limited — it works with virtually any standard ISO. The rare exceptions are ISOs that are intentionally non-standard by design for their own reasons.
 
----
+ 
 
 ## OS Collection
 
 ### Understanding the Table Columns
 
 | Term | What it means |
-|------|---------------|
+|  |     |
 | Boots Live | You can run the OS directly from the USB without installing anything. The OS loads into RAM and runs fully without touching the PC's hard drive. Nothing is saved after you shut down. Useful for testing, repair, or privacy. |
 | Can Install | The ISO includes an installer that can permanently install the OS onto the PC's hard drive. Some ISOs do both — boot live AND offer to install. |
 
 ### Full OS List
 
 | # | Name | Purpose | Boots Live | Can Install |
-|---|------|---------|------------|-------------|
+| |  |   |    |    -|
 | 1 | Windows 11 x64 | Latest Windows, modern hardware | No | Yes |
 | 2 | Windows 10 x64 | Most compatible Windows, widest hardware support | No | Yes |
 | 3 | Windows 10 x32 | Windows 10 for older 32-bit hardware | No | Yes |
@@ -118,7 +118,7 @@ Most ISO files follow a standard boot specification (called the El Torito standa
 | 12 | GParted Live | Partition management for any drive | Yes | No |
 | 13 | Puppy Linux | Extremely lightweight, runs entirely in RAM | Yes | Yes |
 
----
+ 
 
 ## Download Links and Verified SHA256 Checksums
 
@@ -132,7 +132,7 @@ Every file matched at all three stages with zero corruption.
 ### Windows
 
 | Name | Download Link | SHA256 Checksum |
-|------|--------------|-----------------|
+|  |    --|     --|
 | Windows 11 x64 | [microsoft.com](https://www.microsoft.com/en-us/software-download/windows11) | `d141f6030fed50f75e2b03e1eb2e53646c4b21e5386047cb860af5223f102a32` |
 | Windows 10 x64 | [microsoft.com](https://www.microsoft.com/en-us/software-download/windows10ISO) | `a6f470ca6d331eb353b815c043e327a347f594f37ff525f17764738fe812852e` |
 | Windows 10 x32 | [microsoft.com](https://www.microsoft.com/en-us/software-download/windows10ISO) | `ac0b7045b6c3a72a4d46daab0944e109a55d9ede3a11b775fdb57c2dd3fca2ef` |
@@ -144,7 +144,7 @@ Windows 7 note: Microsoft no longer officially distributes Windows 7. These ISOs
 ### Linux
 
 | Name | Download Link | SHA256 Checksum |
-|------|--------------|-----------------|
+|  |    --|     --|
 | Ubuntu Desktop 24.04.4 | [ubuntu.com](https://ubuntu.com/download/desktop) | `3a4c9877b483ab46d7c3fbe165a0db275e1ae3cfe56a5657e5a47c2f99a99d1e` |
 | Ubuntu Server 24.04.3 | [ubuntu.com](https://ubuntu.com/download/server) | `c3514bf0056180d09376462a7a1b4f213c1d6e8ea67fae5c25099c6fd3d8274b` |
 | Linux Mint 22.3 Cinnamon | [linuxmint.com](https://linuxmint.com/download.php) | `a081ab202cfda17f6924128dbd2de8b63518ac0531bcfe3f1a1b88097c459bd4` |
@@ -157,11 +157,11 @@ Puppy Linux note: Puppy Linux is a community project and does not publish offici
 ### Utilities
 
 | Name | Download Link | SHA256 Checksum |
-|------|--------------|-----------------|
+|  |    --|     --|
 | Hiren's Boot CD PE x64 | [hirensbootcd.org](https://www.hirensbootcd.org/download/) | `8c4c670c9c84d6c4b5a9c32e0aa5a55d8c23de851d259207d54679ea774c2498` |
 | GParted Live | [gparted.org](https://gparted.org/download.php) | `167a114b25b0cabb8ca921413b777d2693511bc18bc1625ae310b84597b79413` |
 
----
+ 
 
 ## How to Build This USB
 
@@ -198,7 +198,7 @@ After Ventoy is installed, the USB will appear as a normal drive. Simply copy al
 4. Ventoy's menu will appear listing all ISOs
 5. Select the OS you want and press Enter
 
----
+ 
 
 ## How to Verify Checksums
 
@@ -250,17 +250,17 @@ certutil -hashfile "G:\Win11_25H2_English_x64.iso" SHA256
 
 Compare every output against the checksums listed in this README. They must match exactly, character for character.
 
----
+ 
 
 ## What Does NOT Work With Ventoy
 
 | OS | Reason |
-|----|--------|
+| -|  --|
 | macOS | Uses .app format, requires HFS+ drive — incompatible with Ventoy |
 | Chrome OS Flex | Uses a special disk image format designed to be flashed directly to a drive, not booted live like a standard ISO. Some users report partial success depending on hardware but it is inconsistent and not reliable |
 | Hackintosh | A method of running macOS on non-Apple PC hardware by patching Apple's bootloader — originally considered as a way to turn any PC into a Mac-like environment. Skipped because it requires custom per-hardware configuration, extensive patching, and is actively being phased out as Apple moves away from Intel |
 
----
+ 
 
 ## Notes on Specific OS Behaviour
 
@@ -270,12 +270,12 @@ Compare every output against the checksums listed in this README. They must matc
 - Kali Linux: The Live version is used here — it also includes an install option from within the live environment
 - Puppy Linux: Uniquely runs entirely in RAM after booting — extremely fast and works on very old hardware with as little as 256MB RAM
 
----
+ 
 
 ## USB Storage Used
 
 | File | Size |
-|------|------|
+|  |  |
 | Windows 11 x64 | 7.74 GB |
 | Windows 10 x64 | 6.14 GB |
 | Windows 10 x32 | 4.31 GB |
@@ -293,7 +293,7 @@ Compare every output against the checksums listed in this README. They must matc
 
 The required USB size depends entirely on which ISOs you choose to include. Add up the sizes of your chosen ISOs from the table above and get a USB with some headroom above that total.
 
----
+ 
 
 ## License
 
