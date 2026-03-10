@@ -131,35 +131,78 @@ Every file matched at all three stages with zero corruption.
 
 ### Windows
 
-| Name | Download Link | SHA256 Checksum |
-|  |    --|     --|
-| Windows 11 x64 | [microsoft.com](https://www.microsoft.com/en-us/software-download/windows11) | `d141f6030fed50f75e2b03e1eb2e53646c4b21e5386047cb860af5223f102a32` |
-| Windows 10 x64 | [microsoft.com](https://www.microsoft.com/en-us/software-download/windows10ISO) | `a6f470ca6d331eb353b815c043e327a347f594f37ff525f17764738fe812852e` |
-| Windows 10 x32 | [microsoft.com](https://www.microsoft.com/en-us/software-download/windows10ISO) | `ac0b7045b6c3a72a4d46daab0944e109a55d9ede3a11b775fdb57c2dd3fca2ef` |
-| Windows 7 Pro SP1 x64 | [archive.org](https://archive.org/details/win-7-pro-sp1-english) | `3DAE1A531B90FA72E59B4A86B20216188D398C8C070DA4A5C5A44FE08B1B6E55` |
-| Windows 7 Pro SP1 x32 | [archive.org](https://archive.org/details/win-7-pro-sp1-english) | `FD4CDF56E0087AC4A76D6858046F3EE50977D47917CA96366322E271DDD4838E` |
+**Windows 11 x64** — [Download](https://www.microsoft.com/en-us/software-download/windows11)
+```
+d141f6030fed50f75e2b03e1eb2e53646c4b21e5386047cb860af5223f102a32
+```
+
+**Windows 10 x64** — [Download](https://www.microsoft.com/en-us/software-download/windows10ISO)
+```
+a6f470ca6d331eb353b815c043e327a347f594f37ff525f17764738fe812852e
+```
+
+**Windows 10 x32** — [Download](https://www.microsoft.com/en-us/software-download/windows10ISO)
+```
+ac0b7045b6c3a72a4d46daab0944e109a55d9ede3a11b775fdb57c2dd3fca2ef
+```
+
+**Windows 7 Pro SP1 x64** — [Download](https://archive.org/details/win-7-pro-sp1-english)
+```
+3DAE1A531B90FA72E59B4A86B20216188D398C8C070DA4A5C5A44FE08B1B6E55
+```
+
+**Windows 7 Pro SP1 x32** — [Download](https://archive.org/details/win-7-pro-sp1-english)
+```
+FD4CDF56E0087AC4A76D6858046F3EE50977D47917CA96366322E271DDD4838E
+```
 
 Windows 7 note: Microsoft no longer officially distributes Windows 7. These ISOs are the original Microsoft SP1 English builds sourced from Archive.org. They are not from an official Microsoft download page. Always verify the checksum before use.
 
 ### Linux
 
-| Name | Download Link | SHA256 Checksum |
-|  |    --|     --|
-| Ubuntu Desktop 24.04.4 | [ubuntu.com](https://ubuntu.com/download/desktop) | `3a4c9877b483ab46d7c3fbe165a0db275e1ae3cfe56a5657e5a47c2f99a99d1e` |
-| Ubuntu Server 24.04.3 | [ubuntu.com](https://ubuntu.com/download/server) | `c3514bf0056180d09376462a7a1b4f213c1d6e8ea67fae5c25099c6fd3d8274b` |
-| Linux Mint 22.3 Cinnamon | [linuxmint.com](https://linuxmint.com/download.php) | `a081ab202cfda17f6924128dbd2de8b63518ac0531bcfe3f1a1b88097c459bd4` |
-| Fedora Workstation 43 | [fedoraproject.org](https://fedoraproject.org/workstation/download) | `2a4a16c009244eb5ab2198700eb04103793b62407e8596f30a3e0cc8ac294d77` |
-| Kali Linux 2025.4 Live | [kali.org](https://www.kali.org/get-kali/) | `21e87900f8464b8ba99ed0b4161388f896fc13cf9af976c0bfd692ffe62931c2` |
-| Puppy Linux | [puppylinux-woof-ce.github.io](https://puppylinux-woof-ce.github.io/download.html) | `fe8b9c38e2dac5a9cfd1ee9c9921b02429bf004f14eaea7be8407ef2e77a9b3b` |
+**Ubuntu Desktop 24.04.4** — [Download](https://ubuntu.com/download/desktop)
+```
+3a4c9877b483ab46d7c3fbe165a0db275e1ae3cfe56a5657e5a47c2f99a99d1e
+```
+
+**Ubuntu Server 24.04.3** — [Download](https://ubuntu.com/download/server)
+```
+c3514bf0056180d09376462a7a1b4f213c1d6e8ea67fae5c25099c6fd3d8274b
+```
+
+**Linux Mint 22.3 Cinnamon** — [Download](https://linuxmint.com/download.php)
+```
+a081ab202cfda17f6924128dbd2de8b63518ac0531bcfe3f1a1b88097c459bd4
+```
+
+**Fedora Workstation 43** — [Download](https://fedoraproject.org/workstation/download)
+```
+2a4a16c009244eb5ab2198700eb04103793b62407e8596f30a3e0cc8ac294d77
+```
+
+**Kali Linux 2025.4 Live** — [Download](https://www.kali.org/get-kali/)
+```
+21e87900f8464b8ba99ed0b4161388f896fc13cf9af976c0bfd692ffe62931c2
+```
+
+**Puppy Linux** — [Download](https://puppylinux-woof-ce.github.io/download.html)
+```
+fe8b9c38e2dac5a9cfd1ee9c9921b02429bf004f14eaea7be8407ef2e77a9b3b
+```
 
 Puppy Linux note: Puppy Linux is a community project and does not publish official SHA256 checksums on their download page. The hash listed above is what was produced by this specific download and is consistent across all three verification stages, but cannot be compared against an official published value.
 
 ### Utilities
 
-| Name | Download Link | SHA256 Checksum |
-|  |    --|     --|
-| Hiren's Boot CD PE x64 | [hirensbootcd.org](https://www.hirensbootcd.org/download/) | `8c4c670c9c84d6c4b5a9c32e0aa5a55d8c23de851d259207d54679ea774c2498` |
-| GParted Live | [gparted.org](https://gparted.org/download.php) | `167a114b25b0cabb8ca921413b777d2693511bc18bc1625ae310b84597b79413` |
+**Hiren's Boot CD PE x64** — [Download](https://www.hirensbootcd.org/download/)
+```
+8c4c670c9c84d6c4b5a9c32e0aa5a55d8c23de851d259207d54679ea774c2498
+```
+
+**GParted Live** — [Download](https://gparted.org/download.php)
+```
+167a114b25b0cabb8ca921413b777d2693511bc18bc1625ae310b84597b79413
+```
 
  
 
